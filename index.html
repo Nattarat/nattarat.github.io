@@ -57,6 +57,9 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100'>
 
+    <!-- Manifest -->
+    <link rel="manifest" href="manifest.json">
+
     <!-- Prefix Free -->
     <script src="js/prefixfree.min.js"></script>
 
@@ -72,7 +75,7 @@
 	<!-- Fix IE10 snap mode ignores the meta viewport tag for any viewport smaller than 400 pixels in width -->
     <!--[if gt IE 9]>
 	<script src="js/ie-fixbug/ie10snap.js"></script>
-	<![endif]-->
+    <![endif]-->
 
 </head>
 <body>
@@ -368,6 +371,21 @@
     <script src="js/plugins/fastclick.min.js"></script>
     <!-- Fastclick Function -->
     <script src="js/jquery.plugin-function-fastclick.js"></script>
+
+    <script>
+        let deferredPrompt;
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            // Prevent the mini-infobar from appearing on mobile
+            e.preventDefault();
+            // Stash the event so it can be triggered later.
+            deferredPrompt = e;
+            // Update UI notify the user they can install the PWA
+            showInstallPromotion();
+
+            console.log('A2HS Active!!! ============================================================================================')
+        });
+    </script>
 
 </body>
 </html>
