@@ -9,7 +9,7 @@
  */
 
 $(document).ready(function() {
-    
+
     /*------------------------------------*\
         jPreloader
     \*------------------------------------*/
@@ -27,7 +27,7 @@ $(document).ready(function() {
         });
         $('.fullfill-img img').fadeIn();
     });
-    
+
     /*------------------------------------*\
         ImageFill
     \*------------------------------------*/
@@ -42,14 +42,14 @@ $(document).ready(function() {
     /*------------------------------------*\
         scrollToBySpeed
     \*------------------------------------*/
-	$('.resume-info__myself').click(function () {
-		$('.resume-info__list').scrollToBySpeed({
-			//speed: 1000,
-			//offset: -100,									   
-			easing: 'easeInOutCubic'
-		});
-	});
-    
+	// $('.resume-info__myself').click(function () {
+	// 	$('.resume-info__list').scrollToBySpeed({
+	// 		//speed: 1000,
+	// 		//offset: -100,
+	// 		easing: 'easeInOutCubic'
+	// 	});
+	// });
+
     /*------------------------------------*\
         Bootstrap Modals
     \*------------------------------------*/
@@ -60,5 +60,5 @@ $(document).ready(function() {
 	$('.fullscreen-modal').on('hide.bs.modal', function (e) {
 	  	$('body').removeClass('fullscreen-modal-active');
 	});
-    
+
 }); //End $(document).ready();
