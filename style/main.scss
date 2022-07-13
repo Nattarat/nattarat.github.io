@@ -2,19 +2,30 @@
 // ==================================================================================================
 //
 // Style Guides
-// - Constant
-// - Mixin
-// - Color
-// - Typography
+// - Design systems
+// - Configurations
+// - Components
+// - Pages
 //
 // ==================================================================================================
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Style guide
+// Design systems
 // ============================================================
 @import 'design-systems/constant';
 @import 'design-systems/mixin';
 @import 'design-systems/color';
 @import 'design-systems/typography';
+
+// Configurations
+// ============================================================
 @import 'configurations/scaffolding';
 @import 'configurations/global';
+
+// Components
+// ============================================================
+@import 'components/swiper';
+
+// Pages
+// ============================================================
+@import 'pages/home';

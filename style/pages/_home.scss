@@ -1,0 +1,53 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Home
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@keyframes bg-gradient-shift {
+  0%    { background-position: 50% 50%; }
+  25%   { background-position: 100% 0%; }
+  75%   { background-position: 25% 50%; }
+  100%  { background-position: 50% 50%; }
+}
+
+.home {
+  animation: bg-gradient-shift 10s ease infinite;
+  background: linear-gradient(135deg, rgba(98, 98, 98, 1) 0%, rgba(26, 26, 26, 1) 100%);
+  background-position: 50% 50%;
+  background-size: 500%;
+
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(/static/images/graphics/bg-text-position.svg);
+    background-size: cover;
+  }
+
+  .home-section {
+    &.is-logo {
+      margin: 0 0 16px;
+    }
+
+    &.is-message {}
+  }
+
+  .home-image {
+    &.is-logo {
+      width: auto;
+      height: 320px;
+    }
+  }
+
+  .home-text {
+    &.is-coming-soon {
+      @include font-primary-regular-12;
+      color: $color-gray-600;
+    }
+  }
+}
