@@ -1,0 +1,21 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Scaffolding
+// - Reset browser or CSS framework html style
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+html {
+  overflow-y: auto;
+  min-width: 1px;
+  background-color: $color-primary-white;
+  font-size: $rem; // rem setting
+}
+
+body {
+  @include font-primary-regular-16;
+  touch-action: manipulation; // Fix double tab to zoom in iOS
+  color: $color-primary-gray;
+}

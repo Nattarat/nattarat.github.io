@@ -1,0 +1,227 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Mixin
+// - rem (pixel to rem)
+// - Scrollbar overlay
+// - Border box shadow
+// - Ellipsis
+// - Ellipsis multiple line
+// - Placeholder theme
+// - Tooltip
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+// rem (pixel to rem)
+// - use to every px unit in project style
+// - except static/small element, should use px instead rem eg. scroll bar overlay, tooltip
+// ============================================================
+@function rem($px) {
+  @return #{$px / $rem}rem;
+}
+
+// Scrollbar overlay
+// ============================================================
+@mixin scrollbar-overlay() {
+  overflow: overlay;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba($color: $color-primary-gray, $alpha: 0.1);
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba($color: $color-primary-gray, $alpha: 0.2);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 3px;
+  }
+}
+
+// Border box shadow
+// ============================================================
+@mixin border-box-shadow($color-border: $color-gray-100) {
+  background-color: $color-primary-white;
+  box-shadow: 0 1px 0 0 $color-border; /* Border bottom */
+  box-shadow: 0 -1px 0 0 $color-border; /* Border top */
+  box-shadow: -1px 0 0 0 $color-border; /* Border left */
+  box-shadow: 1px 0 0 0 $color-border; /* Border right */
+  box-shadow: 0 0 0 1px $color-border; /* All the borders by using the spread properties */
+}
+
+// Ellipsis
+// ============================================================
+@mixin ellipsis() {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// Ellipsis multiple line
+// ============================================================
+@mixin ellipsisMultipleLine($number-line: 2) {
+  display: block;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $number-line;
+  -webkit-box-orient: vertical;
+}
+
+// Placeholder theme
+// ============================================================
+@mixin placeholderTheme() {
+  &::-moz-placeholder {
+    @include font-primary-regular-14;
+    color: $color-gray-400;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    @include font-primary-regular-14;
+    color: $color-gray-400;
+  }
+
+  &::-webkit-input-placeholder {
+    @include font-primary-regular-14;
+    color: $color-gray-400;
+  }
+
+  &::placeholder {
+    @include font-primary-regular-14;
+    color: $color-gray-400;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  /* Change style from auto fill from chrome */
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px $color-primary-white inset;
+  }
+
+  &:-webkit-autofill {
+    -webkit-text-fill-color: $color-gray-900;
+  }
+}
+
+// Tooltip
+// ============================================================
+@mixin tooltip($color-tooltip: $color-primary-gray) {
+  position: relative;
+
+  /* Tooltip box */
+  &:before {
+    @include font-primary-regular-12;
+    pointer-events: none;
+    content: attr(data-tooltip);
+    transition: $global-transition;
+    transform: translateX(-50%);
+    opacity: 0;
+    position: absolute;
+    z-index: $z-index-9;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 64px;
+    padding: 6px 12px;
+    background-color: $color-tooltip;
+    border-radius: 12px;
+    line-height: 12px;
+    color: $color-primary-white;
+    white-space: nowrap;
+  }
+
+  /* Tooltip arrow */
+  &:after {
+    pointer-events: none;
+    content: ' ';
+    transition: $global-transition;
+    transform: translateX(-50%);
+    opacity: 0;
+    position: absolute;
+    z-index: $z-index-9;
+    bottom: calc(100% - 4px);
+    left: 50%;
+    border-width: 8px 4px;
+    border-style: solid;
+    border-color: $color-tooltip transparent transparent transparent;
+  }
+
+  &:hover:before,
+  &:hover:after {
+    opacity: 1;
+  }
+
+  &.is-tooltip-position-bottom {
+    /* Tooltip box */
+    &:before {
+      top: calc(100% + 10px);
+      bottom: auto;
+    }
+
+    /* Tooltip arrow */
+    &:after {
+      top: calc(100% - 5px);
+      bottom: auto;
+      border-color: transparent transparent $color-tooltip transparent;
+    }
+  }
+
+  &.is-tooltip-position-left {
+    /* Tooltip box */
+    &:before {
+      transform: translateY(-50%);
+      top: 50%;
+      right: calc(100% + 8px);
+      bottom: auto;
+      left: auto;
+    }
+
+    /* Tooltip arrow */
+    &:after {
+      transform: translateY(-50%);
+      top: 50%;
+      bottom: auto;
+      left: -10px;
+      border-width: 4px 8px;
+      border-color: transparent transparent transparent $color-tooltip;
+    }
+  }
+
+  &.is-tooltip-position-right {
+    /* Tooltip box */
+    &:before {
+      transform: translateY(-50%);
+      top: 50%;
+      bottom: auto;
+      left: calc(100% + 8px);
+    }
+
+    /* Tooltip arrow */
+    &:after {
+      transform: translateY(-50%);
+      top: 50%;
+      right: -10px;
+      bottom: auto;
+      left: auto;
+      border-width: 4px 8px;
+      border-color: transparent $color-tooltip transparent transparent;
+    }
+  }
+}

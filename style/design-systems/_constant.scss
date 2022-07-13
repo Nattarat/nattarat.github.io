@@ -1,0 +1,79 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Other
+// - rem setting
+// - Z Index
+// - Media query
+// - Width, Height, Size
+// - Transition
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+// rem setting
+// ============================================================
+$rem: 16;
+
+// Z Index
+// ============================================================
+$z-index-1: 1;
+$z-index-9: 9;
+$z-index-10: 10;
+$z-index-11: 11;
+$z-index-99: 99;
+$z-index-100: 100;
+$z-index-101: 101;
+$z-index-999: 999;
+$z-index-1000: 1000;
+$z-index-1001: 1001;
+$z-index-9999: 9999;
+$z-index-10000: 10000;
+$z-index-10001: 10001;
+
+// Media query
+// ============================================================
+// Mobile portrait
+$media-query-320: 320px;
+$media-query-360: 360px;
+$media-query-375: 375px;
+$media-query-414: 414px;
+$media-query-428: 428px;
+// Mobile landscape
+$media-query-568: 568px;
+$media-query-667: 667px;
+// Tablet portrait
+$media-query-768: 768px;
+$media-query-834: 834px;
+$media-query-960: 960px;
+// Tablet landscape
+$media-query-1024: 1024px;
+$media-query-1194: 1194px;
+$media-query-1280: 1280px;
+// Desktop
+$media-query-1440: 1440px;
+$media-query-1536: 1536px;
+$media-query-1728: 1728px;
+// Large Desktop
+$media-query-1920: 1920px;
+$media-query-2560: 2560px;
+
+// Width, Height, Size
+// ============================================================
+// Website
+$website-width: 1440px;
+// Call To Action eg. Button, Input, Select
+$cta-height-default: rem(32);
+$cta-height-small: rem(24);
+$cta-height-large: rem(40);
+// Checkbox, Radio
+$checkbox-radio-size: 16px;
+// Modal
+$modal-width-default: rem(768);
+$modal-width-small: rem(480);
+$modal-width-large: rem(960);
+
+// Transition
+// ============================================================
+$global-transition: all 0.3s ease;
+$elastic-transition: all 0.3s cubic-bezier(0.835, -0.005, 0.06, 1);
