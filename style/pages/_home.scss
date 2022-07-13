@@ -19,6 +19,10 @@
   background-position: 50% 50%;
   background-size: 500%;
 
+  @media (max-width: $media-query-428) {
+    background-size: 200%;
+  }
+
   .home-container {
     display: flex;
     flex-direction: column;
@@ -31,10 +35,12 @@
 
   .home-section {
     &.is-logo {
-      margin: 0 0 16px;
+      margin: 0 0 24px;
     }
 
-    &.is-message {}
+    &.is-message {
+      margin: 0 0 42px;
+    }
   }
 
   .home-image {
