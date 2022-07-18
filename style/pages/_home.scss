@@ -6,6 +6,8 @@
 // ==================================================================================================
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Utilities
+// ============================================================
 @keyframes bg-gradient-shift {
   0%    { background-position: 50% 50%; }
   25%   { background-position: 100% 0%; }
@@ -13,9 +15,11 @@
   100%  { background-position: 50% 50%; }
 }
 
+// Main style
+// ============================================================
 .home {
   animation: bg-gradient-shift 10s ease infinite;
-  background: linear-gradient(135deg, rgba(98, 98, 98, 1) 0%, rgba(26, 26, 26, 1) 100%);
+  background: linear-gradient(135deg, rgba(26, 26, 26, 1) 0%, rgba(50, 50, 50, 1) 100%);
   background-position: 50% 50%;
   background-size: 500%;
 
@@ -57,3 +61,15 @@
     }
   }
 }
+
+// Fix browser style
+// ============================================================
+.firefox {
+  .home {
+    animation: none; // Fix linear gradient animation
+    background: $color-primary-gray;
+  }
+}
+
+// Responsive
+// ============================================================
