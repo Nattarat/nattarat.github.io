@@ -1,0 +1,108 @@
+html {
+  overflow-y: auto;
+  min-width: 1px;
+  background-color: #FFFFFF;
+  font-size: 16;
+}
+
+body {
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 1rem;
+  touch-action: manipulation;
+  color: #1A1A1A;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+}
+
+::-moz-selection {
+  color: #FFFFFF;
+  background: #1A1A1A;
+}
+
+::selection {
+  color: #FFFFFF;
+  background: #1A1A1A;
+}
+
+.swiper.is-home-logo {
+  width: 187px;
+  height: 320px;
+}
+
+@-webkit-keyframes bg-gradient-shift {
+  0% {
+    background-position: 50% 50%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  75% {
+    background-position: 25% 50%;
+  }
+  100% {
+    background-position: 50% 50%;
+  }
+}
+
+@keyframes bg-gradient-shift {
+  0% {
+    background-position: 50% 50%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  75% {
+    background-position: 25% 50%;
+  }
+  100% {
+    background-position: 50% 50%;
+  }
+}
+.home {
+  -webkit-animation: bg-gradient-shift 10s ease infinite;
+          animation: bg-gradient-shift 10s ease infinite;
+  background: linear-gradient(135deg, rgb(26, 26, 26) 0%, rgb(50, 50, 50) 100%);
+  background-position: 50% 50%;
+  background-size: 500%;
+}
+@media (max-width: 428px) {
+  .home {
+    background-size: 200%;
+  }
+}
+.home .home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(/static/images/graphics/bg-text-position.svg);
+  background-size: cover;
+}
+.home .home-section.is-logo {
+  margin: 0 0 16px;
+}
+.home .home-section.is-message {
+  margin: 0 0 34px;
+}
+.home .home-image.is-logo {
+  width: auto;
+  height: 320px;
+}
+.home .home-text.is-coming-soon {
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: #626262;
+}
+
+.firefox .home {
+  -webkit-animation: none;
+          animation: none;
+  background: #1A1A1A;
+}/*# sourceMappingURL=main.css.map */

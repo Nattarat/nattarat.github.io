@@ -39,275 +39,51 @@ $line-height-secondary: 1.5;
 // Primary (IBM Plex Sans Thai)
 //
 // Regular
-// @include font-primary-regular-48;
-// @include font-primary-regular-40;
-// @include font-primary-regular-32;
-// @include font-primary-regular-24;
-// @include font-primary-regular-18;
-// @include font-primary-regular-16;
-// @include font-primary-regular-14;
-// @include font-primary-regular-12;
-// @include font-primary-regular-10;
+// @include font-primary-regular(16);
 //
 // Bold
-// @include font-primary-bold-48;
-// @include font-primary-bold-40;
-// @include font-primary-bold-32;
-// @include font-primary-bold-24;
-// @include font-primary-bold-18;
-// @include font-primary-bold-16;
-// @include font-primary-bold-14;
-// @include font-primary-bold-12;
-// @include font-primary-bold-10;
+// @include font-primary-bold(16);
 //
 // ============================================================
 
 // Regular
 // ------------------------------
-@mixin font-primary-regular-48() {
+@mixin font-primary-regular($font-size: 16) {
   @include font-primary-base;
   font-weight: $font-weight-primary-1;
-  font-size: rem(48);
-}
-
-@mixin font-primary-regular-40() {
-  @include font-primary-base;
-  font-weight: $font-weight-primary-1;
-  font-size: rem(40);
-}
-
-@mixin font-primary-regular-32() {
-  @include font-primary-base;
-  font-weight: $font-weight-primary-1;
-  font-size: rem(32);
-}
-
-@mixin font-primary-regular-24() {
-  @include font-primary-base;
-  font-weight: $font-weight-primary-1;
-  font-size: rem(24);
-}
-
-@mixin font-primary-regular-18() {
-  @include font-primary-base;
-  font-weight: $font-weight-primary-1;
-  font-size: rem(18);
-}
-
-@mixin font-primary-regular-16() {
-  @include font-primary-base;
-  font-weight: $font-weight-primary-1;
-  font-size: rem(16);
-}
-
-@mixin font-primary-regular-14() {
-  @include font-primary-base;
-  font-weight: $font-weight-primary-1;
-  font-size: rem(14);
-}
-
-@mixin font-primary-regular-12() {
-  @include font-primary-base;
-  font-weight: $font-weight-primary-1;
-  font-size: rem(12);
-}
-
-@mixin font-primary-regular-10() {
-  @include font-primary-base;
-  font-weight: $font-weight-primary-1;
-  font-size: rem(10);
+  font-size: rem($font-size);
 }
 
 // Bold
 // ------------------------------
-@mixin font-primary-bold-48() {
+@mixin font-primary-bold($font-size: 16) {
   @include font-primary-base;
   font-weight: $font-weight-primary-2;
-  font-size: rem(48);
-}
-
-@mixin font-primary-bold-40() {
-  @include font-primary-base;
-  font-weight: $font-weight-primary-2;
-  font-size: rem(40);
-}
-
-@mixin font-primary-bold-32() {
-  @include font-primary-base;
-  font-weight: $font-weight-primary-2;
-  font-size: rem(32);
-}
-
-@mixin font-primary-bold-24() {
-  @include font-primary-base;
-  font-weight: $font-weight-primary-2;
-  font-size: rem(24);
-}
-
-@mixin font-primary-bold-18() {
-  @include font-primary-base;
-  font-weight: $font-weight-primary-2;
-  font-size: rem(18);
-}
-
-@mixin font-primary-bold-16() {
-  @include font-primary-base;
-  font-weight: $font-weight-primary-2;
-  font-size: rem(16);
-}
-
-@mixin font-primary-bold-14() {
-  @include font-primary-base;
-  font-weight: $font-weight-primary-2;
-  font-size: rem(14);
-}
-
-@mixin font-primary-bold-12() {
-  @include font-primary-base;
-  font-weight: $font-weight-primary-2;
-  font-size: rem(12);
-}
-
-@mixin font-primary-bold-10() {
-  @include font-primary-base;
-  font-weight: $font-weight-primary-2;
-  font-size: rem(10);
+  font-size: rem($font-size);
 }
 
 // Secondary (Sarabun)
 //
 // Regular
-// @include font-secondary-regular-48;
-// @include font-secondary-regular-40;
-// @include font-secondary-regular-32;
-// @include font-secondary-regular-24;
-// @include font-secondary-regular-18;
-// @include font-secondary-regular-16;
-// @include font-secondary-regular-14;
-// @include font-secondary-regular-12;
-// @include font-secondary-regular-10;
+// @include font-secondary-regular(16);
 //
 // Bold
-// @include font-secondary-bold-48;
-// @include font-secondary-bold-40;
-// @include font-secondary-bold-32;
-// @include font-secondary-bold-24;
-// @include font-secondary-bold-18;
-// @include font-secondary-bold-16;
-// @include font-secondary-bold-14;
-// @include font-secondary-bold-12;
-// @include font-secondary-bold-10;
+// @include font-secondary-bold(16);
 //
 // ============================================================
 
 // Regular
 // ------------------------------
-@mixin font-secondary-regular-48() {
+@mixin font-secondary-regular($font-size: 16) {
   @include font-secondary-base;
   font-weight: $font-weight-secondary-1;
-  font-size: rem(48);
-}
-
-@mixin font-secondary-regular-40() {
-  @include font-secondary-base;
-  font-weight: $font-weight-secondary-1;
-  font-size: rem(40);
-}
-
-@mixin font-secondary-regular-32() {
-  @include font-secondary-base;
-  font-weight: $font-weight-secondary-1;
-  font-size: rem(32);
-}
-
-@mixin font-secondary-regular-24() {
-  @include font-secondary-base;
-  font-weight: $font-weight-secondary-1;
-  font-size: rem(24);
-}
-
-@mixin font-secondary-regular-18() {
-  @include font-secondary-base;
-  font-weight: $font-weight-secondary-1;
-  font-size: rem(18);
-}
-
-@mixin font-secondary-regular-16() {
-  @include font-secondary-base;
-  font-weight: $font-weight-secondary-1;
-  font-size: rem(16);
-}
-
-@mixin font-secondary-regular-14() {
-  @include font-secondary-base;
-  font-weight: $font-weight-secondary-1;
-  font-size: rem(14);
-}
-
-@mixin font-secondary-regular-12() {
-  @include font-secondary-base;
-  font-weight: $font-weight-secondary-1;
-  font-size: rem(12);
-}
-
-@mixin font-secondary-regular-10() {
-  @include font-secondary-base;
-  font-weight: $font-weight-secondary-1;
-  font-size: rem(10);
+  font-size: rem($font-size);
 }
 
 // Bold
 // ------------------------------
-@mixin font-secondary-bold-48() {
+@mixin font-secondary-bold($font-size: 16) {
   @include font-secondary-base;
   font-weight: $font-weight-secondary-2;
-  font-size: rem(48);
-}
-
-@mixin font-secondary-bold-40() {
-  @include font-secondary-base;
-  font-weight: $font-weight-secondary-2;
-  font-size: rem(40);
-}
-
-@mixin font-secondary-bold-32() {
-  @include font-secondary-base;
-  font-weight: $font-weight-secondary-2;
-  font-size: rem(32);
-}
-
-@mixin font-secondary-bold-24() {
-  @include font-secondary-base;
-  font-weight: $font-weight-secondary-2;
-  font-size: rem(24);
-}
-
-@mixin font-secondary-bold-18() {
-  @include font-secondary-base;
-  font-weight: $font-weight-secondary-2;
-  font-size: rem(18);
-}
-
-@mixin font-secondary-bold-16() {
-  @include font-secondary-base;
-  font-weight: $font-weight-secondary-2;
-  font-size: rem(16);
-}
-
-@mixin font-secondary-bold-14() {
-  @include font-secondary-base;
-  font-weight: $font-weight-secondary-2;
-  font-size: rem(14);
-}
-
-@mixin font-secondary-bold-12() {
-  @include font-secondary-base;
-  font-weight: $font-weight-secondary-2;
-  font-size: rem(12);
-}
-
-@mixin font-secondary-bold-10() {
-  @include font-secondary-base;
-  font-weight: $font-weight-secondary-2;
-  font-size: rem(10);
+  font-size: rem($font-size);
 }

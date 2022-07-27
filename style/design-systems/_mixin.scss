@@ -18,8 +18,9 @@
 // - except static/small element, should use px instead rem eg. scroll bar overlay, tooltip
 // ============================================================
 @function rem($px) {
-  @return #{$px / $rem}rem;
+  @return calc($px / $rem) + rem;
 }
+
 
 // Scrollbar overlay
 // ============================================================
@@ -81,23 +82,23 @@
 // ============================================================
 @mixin placeholderTheme() {
   &::-moz-placeholder {
-    @include font-primary-regular-14;
+    @include font-primary-regular(14);
     color: $color-gray-400;
     opacity: 1;
   }
 
   &:-ms-input-placeholder {
-    @include font-primary-regular-14;
+    @include font-primary-regular(14);
     color: $color-gray-400;
   }
 
   &::-webkit-input-placeholder {
-    @include font-primary-regular-14;
+    @include font-primary-regular(14);
     color: $color-gray-400;
   }
 
   &::placeholder {
-    @include font-primary-regular-14;
+    @include font-primary-regular(14);
     color: $color-gray-400;
   }
 
@@ -125,7 +126,7 @@
 
   /* Tooltip box */
   &:before {
-    @include font-primary-regular-12;
+    @include font-primary-regular(12);
     pointer-events: none;
     content: attr(data-tooltip);
     transition: $global-transition;

@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  @include font-primary-regular-16;
+  @include font-primary-regular(16);
   touch-action: manipulation; // Fix double tab to zoom in iOS
   color: $color-primary-gray;
 }
